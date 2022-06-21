@@ -24,9 +24,9 @@ FROM Production.Product
 WHERE Color IS NOT NULL	
 
 -- 6.
-SELECT [Name], Color
+SELECT 'NAME: ' + [Name] + ' -- COLOR: ' + Color
 FROM Production.Product
-WHERE Color	IN ('Black', 'Silver')
+WHERE Color IS NOT NULL	
 
 -- 7.
 SELECT ProductID, [Name]
