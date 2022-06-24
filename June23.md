@@ -1,4 +1,5 @@
 * 1
+
 CREATE VIEW view_product_order_peng
 AS
 SELECT p.ProductName [Name], od.Quantity
@@ -7,6 +8,7 @@ ON p.ProductID=od.ProductID
 
 
 * 2
+
 CREATE PROC sp_product_order_quantity_peng
 @id int
 AS
@@ -24,6 +26,7 @@ END
 
 
 * 3
+
 CREATE PROC sp_product_order_city_peng
 @n nvarchar(40)
 AS
@@ -38,6 +41,7 @@ END
 
 
 * 4
+
 CREATE TABLE city_peng
 (ID int, City varchar(20))
 
@@ -73,6 +77,7 @@ DROP VIEW Packers_Peng
 
 
 * 5
+
 CREATE PROC sp_birthday_employees_peng
 AS
 BEGIN
@@ -86,4 +91,5 @@ END
 ![q5img](https://github.com/coco8472/Antra_Training/blob/main/June23-q5.png)
 
 * 6
+
 I would try inner join and see the number of rows in the result table. If I got row(joined) = row(table1)+row(table2), I can conclude that these two tables don't have any row in common. If I got row(joined) = row(table1) = row(table2), then I know the two tables are the same. Othewise table1 and table2 will have some common rows.
