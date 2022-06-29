@@ -155,7 +155,28 @@ class Guess
 }
 ```
 
-3. a
+## 3. Print a Pyramid
+```
+class pyramid
+{
+    int layer = int.Parse(Console.ReadLine());
+    static void main(int layer)
+    {
+        int w = layer * 2 - 1;
+        for (int l = 1; l <= layer; l++)
+        {
+            int s = 2 * l - 1;
+            int b = layer - l;
+            string blank = String.Concat(Enumerable.Repeat(" ", b));
+            string star = String.Concat(Enumerable.Repeat("*", s));
+            string sol = String.Concat(blank, star, blank);
+            Console.WriteLine(sol);
+        }
+    }
+}
+```
+
+
 4. a
 5. a
 6. a
