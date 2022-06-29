@@ -36,18 +36,29 @@
 ## 1. Data types
 
 Console.WriteLine("sbyte\tSize = {0}\t Max Value: {1}\t Min Value: {2}", sizeof(sbyte), sbyte.MaxValue, sbyte.MinValue);
+
 Console.WriteLine("byte\tSize = {0}\t Max Value: {1}\t Min Value: {2}", sizeof(byte), byte.MaxValue, byte.MinValue);
+
 Console.WriteLine("short\tSize = {0}\t Max Value: {1}\t Min Value: {2}", sizeof(short), short.MaxValue, short.MinValue);
+
 Console.WriteLine("ushort\tSize = {0}\t Max Value: {1}\t Min Value: {2}", sizeof(ushort), ushort.MaxValue, ushort.MinValue);
+
 Console.WriteLine("int\tSize = {0}\t Max Value: {1}\t Min Value: {2}", sizeof(int), int.MaxValue, int.MinValue);
+
 Console.WriteLine("uint\tSize = {0}\t Max Value: {1}\t Min Value: {2}", sizeof(uint), uint.MaxValue, uint.MinValue);
+
 Console.WriteLine("long\tSize = {0}\t Max Value: {1}\t Min Value: {2}", sizeof(long), long.MaxValue, long.MinValue);
+
 Console.WriteLine("ulong\tSize = {0}\t Max Value: {1}\t Min Value: {2}", sizeof(ulong), ulong.MaxValue, ulong.MinValue);
+
 Console.WriteLine("float\tSize = {0}\t Max Value: {1}\t Min Value: {2}", sizeof(float), float.MaxValue, float.MinValue);
+
 Console.WriteLine("double\tSize = {0}\t Max Value: {1}\t Min Value: {2}", sizeof(double), double.MaxValue, double.MinValue);
+
 Console.WriteLine("decimal\tSize = {0}\t Max Value: {1}\t Min Value: {2}", sizeof(decimal), decimal.MaxValue, decimal.MinValue);
 
 ## 2. Convert time
+`
 class time_convert
 {
     public static void Main()
@@ -69,6 +80,8 @@ class time_convert
 
     }
 }
+`
+
 
 # Controlling Flow and Converting Types
 1. What happens when you divide an int variable by 0?
