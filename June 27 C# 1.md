@@ -2,12 +2,12 @@
 
 ## 1. Data Type:
 
-* (char) A person’s telephone number
+* (string) A person’s telephone number
 * (float) A person’s height
 * (byte) A person’s age
-* (char) A person’s gender (Male, Female, Prefer Not To Answer)
+* (string) A person’s gender (Male, Female, Prefer Not To Answer)
 * (decimal) A person’s salary
-* (char) A book’s ISBN
+* (string) A book’s ISBN
 * (decimal) A book’s price
 * (float) A book’s shipping weight
 * (double) A country’s population
