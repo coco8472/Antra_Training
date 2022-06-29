@@ -121,7 +121,30 @@ class time_convert
 * The result is that, it will loop forever because of overflow. When byte i achieves 255, i++ will make it become 0, and the stop condition will never meet.
 * I shall probably create a int variable to calculate the number of loops, and raise an exception if it reaches the threshold. Or raise an exception when I see the same i value twice.
 
-## 2. Guess Value
+
+## 2. Print a Pyramid
+```
+class pyramid
+{
+    int layer = int.Parse(Console.ReadLine());
+    static void main(int layer)
+    {
+        int w = layer * 2 - 1;
+        for (int l = 1; l <= layer; l++)
+        {
+            int s = 2 * l - 1;
+            int b = layer - l;
+            string blank = String.Concat(Enumerable.Repeat(" ", b));
+            string star = String.Concat(Enumerable.Repeat("*", s));
+            string sol = String.Concat(blank, star, blank);
+            Console.WriteLine(sol);
+        }
+    }
+}
+```
+
+
+## 3. Guess Value
 
 ```
 class Guess
@@ -155,30 +178,72 @@ class Guess
 }
 ```
 
-## 3. Print a Pyramid
+
+## 4. Birthday
 ```
-class pyramid
+class birthday
 {
-    int layer = int.Parse(Console.ReadLine());
-    static void main(int layer)
+    DateTime birth = DateTime.Parse(Console.ReadLine());
+    DateTime now = DateTime.Today;
+
+    static void main(DateTime birth, DateTime now)
     {
-        int w = layer * 2 - 1;
-        for (int l = 1; l <= layer; l++)
+        int nd = (now - birth).Days;
+        Console.WriteLine($"You are {nd} days old.");
+
+    }
+}
+```
+
+
+## 5. Greetings
+```
+class greeting
+{
+    DateTime now = DateTime.Now;
+    public static void greetings(DateTime now)
+    {
+        int hour = now.Hour;
+        if (hour <= 6)
         {
-            int s = 2 * l - 1;
-            int b = layer - l;
-            string blank = String.Concat(Enumerable.Repeat(" ", b));
-            string star = String.Concat(Enumerable.Repeat("*", s));
-            string sol = String.Concat(blank, star, blank);
-            Console.WriteLine(sol);
+            Console.WriteLine("Good Night");
+        }
+        if (hour > 6 && hour <= 12)
+        {
+            Console.WriteLine("Good Morning");
+        }
+        if (hour > 12 && hour <= 13)
+        {
+            Console.WriteLine("Good Afternoon");
+        }
+        if (hour > 13 && hour <= 18)
+        {
+            Console.WriteLine("Good Evening");
+        }
+        if (hour > 18)
+        {
+            Console.WriteLine("Good Night");
         }
     }
 }
 ```
 
 
-4. a
-5. a
-6. a
+## 6. Counting
+```
+class counting
+{
+    public static void count24()
+    {
+        for (int i = 1; i < 5; i++)
+        {
+            for (int cur = 0; cur<=24; cur+=i)
+            {
+                Console.WriteLine($"{cur}, ");
+            }
+        }
+    }
+}
+```
 
 
