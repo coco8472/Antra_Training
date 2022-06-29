@@ -117,8 +117,44 @@ class time_convert
 * IEnumerable interface.
 
 # Practice loops and operators
-1. a
-2. a
+## 1. FizzBuzz
+* The result is that, it will loop forever because of overflow. When byte i achieves 255, i++ will make it become 0, and the stop condition will never meet.
+* I shall probably create a int variable to calculate the number of loops, and raise an exception if it reaches the threshold. Or raise an exception when I see the same i value twice.
+
+## 2. Guess Value
+
+```
+class Guess
+{
+    public int correctNumber = new Random().Next(3) + 1;
+    static void Main(int correctNumber)
+    {
+        int guessedNumber = int.Parse(Console.ReadLine());
+        while (guessedNumber != correctNumber) ;
+        {
+            if (guessedNumber < 1 || guessedNumber > 3)
+            {
+                Console.WriteLine("Please enter a number between 1 and 3");
+
+            }
+            else if (guessedNumber < correctNumber)
+            {
+                Console.WriteLine("Your guess is too small");
+            }
+            else 
+            {
+                Console.WriteLine("Your guess is too big");
+            }
+            int new_guessedNumber = int.Parse(Console.ReadLine());
+            guessedNumber = new_guessedNumber;
+        }
+
+        Console.WriteLine("Correct!");
+
+    }
+}
+```
+
 3. a
 4. a
 5. a
