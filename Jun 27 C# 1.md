@@ -76,32 +76,45 @@ class time_convert
         string mcs = mis + "000";
         string nos = mcs + "000";
 
-        Console.WriteLine($"{c} centuries = {y} years = {d} days = {h} hours = {m} minutes = {s} seconds = {mis} milliseconds = {mcs} microseconds = {nos} nanoseconds");
-
+        Console.WriteLine($"{c} centuries = {y} years = {d} days = " +
+            $"{h} hours = {m} minutes = {s} seconds = {mis} milliseconds =" +
+            $" {mcs} microseconds = {nos} nanoseconds");
     }
 }
 ```
-
-
-
-
-
 
 # Controlling Flow and Converting Types
 1. What happens when you divide an int variable by 0?
 * I shall have a DivideByZeroException exception.
 
-3. What happens when you divide a double variable by 0?
-4. What happens when you overflow an int variable, that is, set it to a value beyond its range?
-5. What is the difference between x = y++; and x = ++y;?
-6. What is the difference between break, continue, and return when used inside a loop statement?
-7. What are the three parts of a for statement and which of them are required?
-8. What is the difference between the = and == operators?
-9. Does the following statement compile? for ( ; true; ) ;
-10. What does the underscore _ represent in a switch expression?
-11. What interface must an object implement to be enumerated over by using the foreach
-statement?
+2. What happens when you divide a double variable by 0?
+* I shall receive a positive infinity, negative infinity, or not a number (NaN).
 
+3. What happens when you overflow an int variable, that is, set it to a value beyond its range?
+* I shall not get an exception, and the result will be looped back. Which means MaxValue + 1 = MinValue.
+
+4. What is the difference between x = y++; and x = ++y?
+* x = y++ means y will assign the value to x and then increase. x = ++y means y will increase first, and then assign the value to x.
+
+5. What is the difference between break, continue, and return when used inside a loop statement?
+* The break statement: terminates the closest enclosing iteration statement or switch statement.
+* The continue statement: starts a new iteration of the closest enclosing iteration statement.
+* The return statement: terminates execution of the function in which it appears and returns control to the caller.
+
+6. What are the three parts of a for statement and which of them are required?
+* The keyword For that starts the loop, the condition being tested, and the EndFor keyword that terminates the loop. Each component is required.
+
+7. What is the difference between the = and == operators?
+* = means assigning value. == means compairing whether the two values are the same and return True or False.
+
+8. Does the following statement compile? for ( ; true; ) ;
+* Yes, and it will loop forever untill reaches the maximum.
+
+9. What does the underscore _ represent in a switch expression?
+* It means replacing the default keyword to signify that it should match anything if reached.
+
+10. What interface must an object implement to be enumerated over by using the foreach statement?
+* IEnumerable interface.
 
 # Practice loops and operators
 1. a
