@@ -34,7 +34,7 @@
 
 # Practice number sizes and ranges
 ## 1. Data types
-
+```
 Console.WriteLine("sbyte\tSize = {0}\t Max Value: {1}\t Min Value: {2}", sizeof(sbyte), sbyte.MaxValue, sbyte.MinValue);
 
 Console.WriteLine("byte\tSize = {0}\t Max Value: {1}\t Min Value: {2}", sizeof(byte), byte.MaxValue, byte.MinValue);
@@ -56,6 +56,8 @@ Console.WriteLine("float\tSize = {0}\t Max Value: {1}\t Min Value: {2}", sizeof(
 Console.WriteLine("double\tSize = {0}\t Max Value: {1}\t Min Value: {2}", sizeof(double), double.MaxValue, double.MinValue);
 
 Console.WriteLine("decimal\tSize = {0}\t Max Value: {1}\t Min Value: {2}", sizeof(decimal), decimal.MaxValue, decimal.MinValue);
+```
+
 
 ## 2. Convert time
 ```
