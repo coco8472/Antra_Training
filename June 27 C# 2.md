@@ -167,7 +167,7 @@ class Rotation
 
 ## 5. Longest Sequence
 ```
-class Rotation
+class Longest
 {
     static void Main()
     {
@@ -198,7 +198,30 @@ class Rotation
 ```
 
 
-## 6. a
+## 6. Most Frequent Number
+```
+class MostFreq
+{
+    static void Main()
+    {
+        string numsstr = Console.ReadLine();
+        string[] nums = numsstr.Split(' ');
+        var frequency = nums.GroupBy(x => x).ToDictionary(x => x.Key, x => x.Count());
+        int maxfreq = 0;
+        string maxstr = " ";
+        foreach(KeyValuePair<string, int> entry in frequency)
+        {
+            if (entry.Value > maxfreq)
+            {
+                maxstr = entry.Key;
+                maxfreq = entry.Value;
+            }
+        }
+
+        Console.WriteLine($"The most frequent element is {maxstr}");
+    }    
+}
+```
 
 
 # Practice Strings
