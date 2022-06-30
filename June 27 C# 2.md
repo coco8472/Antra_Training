@@ -54,29 +54,97 @@ class CopyArray
 
 
 ## 2. Manage a list
+```
+class ManageArray
+{
+    static void Main()
+    {
+        while (true)
+        {
+            Console.WriteLine("Enter command (+ item, - item, or -- to clear):");
+            StringBuilder builder = new StringBuilder();
+            string UserCommand = Console.ReadLine();
+            builder.Append(UserCommand);
+            List<string> UserList = new List<string>();
 
 
-3. a
+            if (builder[0] == '+')
+            {
+                UserList.Add(builder.ToString().Remove(0,2));
+            }
+            if (builder[0] == '-')
+            {
+                if (builder[1] == '-')
+                {
+                    UserList.Clear();
+                }
+                else
+                {
+                    UserList.Add(builder.ToString(2, 20));
+                }
+            }
+        }
+    }
+}
+```
 
 
-4. a
+## 3. Prime Numbers
+```
+class FindPrime
+{
+
+    public static bool IsPrime(int number)
+    {
+        if (number <= 1) return false;
+        if (number == 2) return true;
+        if (number % 2 == 0) return false;
+
+        var boundary = (int)Math.Floor(Math.Sqrt(number));
+
+        for (int i = 3; i <= boundary; i += 2)
+            if (number % i == 0)
+                return false;
+
+        return true;
+    }
+    static void Main()
+    {
+        int startNum = int.Parse(Console.ReadLine());
+        int endNum = int.Parse(Console.ReadLine());
+        string sol = "";
+        for (int num = startNum; num <= endNum; num++)
+        {
+            bool res = IsPrime(num);
+            if (res)
+            {
+                sol = sol + num.ToString()+", ";
+            }
+        }
+        Console.WriteLine(sol);
+    }
+}
+```
 
 
-5. a
+## 4. a
 
 
-6. a
+## 5. a
+
+
+## 6. a
 
 
 # Practice Strings
-1. a
+## 1. a
 
 
-2. a
+## 2. a
 
 
-3. a
+## 3. a
 
 
-4. a
+## 4. a
 
