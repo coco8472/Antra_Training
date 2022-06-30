@@ -262,10 +262,43 @@ class Reverse
 
 
 ## 2. Reverse Words
+```
+class ReverseWords
+{
+    static void Main()
+    {
+        string inp = Console.ReadLine();
+        char[] delimiterChars = { ' ', ',', '.', ':', ';','=','(',')','&','[',']','!','?'};
+        string[] words = inp.Split(delimiterChars);
+        int lenwords = String.Join("", words.ToArray()).Length;
+        int lendeli = inp.Length - lenwords;
+        int lensol = words.Length+lendeli;
+
+        string[] sol = new string[lensol];
+        int pwords = words.Length - 1;
+        int psol = 0;
+        for (int i = 0; i < inp.Length; i++)
+        {
+            if (delimiterChars.Contains(inp[i]))
+            {
+                sol[psol] = inp[i].ToString();
+                psol++;
+            }
+            else
+            {
+                sol[psol] = words[pwords];
+                psol++;
+                pwords--;
+            }
+        } 
+        Console.WriteLine(String.Join('', sol.ToArray()));
+    }    
+}
+```
 
 
-## 3. a
+## 3. Extract Palindrome
 
 
-## 4. a
+## 4. Parse URL
 
