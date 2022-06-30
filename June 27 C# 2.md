@@ -225,10 +225,43 @@ class MostFreq
 
 
 # Practice Strings
-## 1. a
+## 1. Reverse
+* Use the first way
+```
+class Reverse
+{
+    static void Main()
+    {
+        string inp = Console.ReadLine();
+        char[] ele = inp.ToCharArray();
+        char[] revele = new char[ele.Length];
+        for (int i=0; i < ele.Length; i++)
+        {
+            revele[i] = ele[ele.Length -1- i];
+        }
+
+        Console.WriteLine(String.Join(' ', revele));
+    }    
+}
+```
+
+* Use the second way
+```
+class Reverse
+{
+    static void Main()
+    {
+        string inp = Console.ReadLine();
+        for (int i=0; i < inp.Length; i++)
+        {
+            Console.WriteLine(inp[inp.Length -1-i]);
+        }
+    }    
+}
+```
 
 
-## 2. a
+## 2. Reverse Words
 
 
 ## 3. a
