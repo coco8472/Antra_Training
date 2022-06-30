@@ -127,10 +127,75 @@ class FindPrime
 ```
 
 
-## 4. a
+## 4. Rotation
+```
+class Rotation
+{
+    static void Main()
+    {
+        string numsstr = Console.ReadLine();   
+        string[] nums = numsstr.Split(' ');
+        int k = int.Parse(Console.ReadLine());
+        var numbers = new List<int>(nums.Length);
+        var results = new List<int>(nums.Length);
+        for (int i=0; i<nums.Length; i++)
+        {
+            numbers.Add(int.Parse(nums[i]));
+            results.Add(0);
+        }
+
+        for (int i = 1; i <= k; i++)
+        {
+            int last = numbers[nums.Length - 1];
+            numbers.RemoveAt(nums.Length - 1);
+            //numbers.Add(last);
+            numbers.Insert(0, last);
+            //Console.WriteLine(String.Join(", ", numbers.ToArray()));
+            for (int j = 0; j < numbers.Count; j++)
+            {
+                //Console.WriteLine(j);
+                //Console.WriteLine(numbers[j]);
+                results[j] += numbers[j];
+            }
+        }
+        var result = String.Join(", ", results.ToArray());
+        Console.WriteLine(result);
+    }
+}
+```
 
 
-## 5. a
+## 5. Longest Sequence
+```
+class Rotation
+{
+    static void Main()
+    {
+        string numsstr = Console.ReadLine();
+        string[] nums = numsstr.Split(' ');
+        int nowlength = 1;
+        int maxlength = 1;
+        string s = " ";
+        for (int i = 0; i < nums.Length-1; i++)
+        {
+            if (nums[i + 1] == nums[i])
+            {
+                nowlength++;
+                if (nowlength > maxlength)
+                {
+                    maxlength = nowlength;
+                    s = nums[i];
+                }
+            }
+            else
+            {
+                nowlength = 1;
+            }
+        }
+        Console.WriteLine(string.Concat(Enumerable.Repeat(s, maxlength)));
+    }    
+}
+```
 
 
 ## 6. a
