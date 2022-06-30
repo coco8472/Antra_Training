@@ -20,10 +20,40 @@
 * CopyTo let you specify an index (if required) to the destination array.
 
 # Practice Arrays
-1. a
+## 1. Copying an array
+```
+class CopyArray
+{
+    static void Main()
+    {
+        int[] n = new int[10];
+        int[] nn = new int[n.Length];
+
+        for (int i = 0; i < 10; i++)
+        {
+            n[i] = i;
+        }
+        for(int i = 0; i < 10; i++)
+        {
+            nn[i] = n[i];
+        }
+
+        Console.WriteLine("The original array is:");
+        for (int i = 0; i < 10; i++)
+        {
+            Console.WriteLine(n[i]);
+        }
+        Console.WriteLine("The copied array is:");
+        for (int i = 0; i < 10; i++)
+        {
+            Console.WriteLine(nn[i]);
+        }
+    }
+}
+```
 
 
-2. a
+## 2. Manage a list
 
 
 3. a
