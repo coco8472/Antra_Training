@@ -298,7 +298,57 @@ class ReverseWords
 
 
 ## 3. Extract Palindrome
+```
+class Palindrom
+{
+    static void Main()
+    {
+        string inp = Console.ReadLine();
+        char[] delimiterChars = { ' ', ',', '.', ':', ';','=','(',')','&','[',']','!','?'};
+        string[] words = inp.Split(delimiterChars);
+        List<string> sol = new List<string>();
 
+
+        for (int i = 0; i < words.Length; i++)
+        {
+            if (words[i].SequenceEqual(words[i].Reverse()))
+            {
+                sol.Add(words[i]);
+            }
+        }
+        sol.Sort();
+
+        Console.WriteLine(String.Join(", ", sol.ToArray()));
+    }    
+}
+```
 
 ## 4. Parse URL
+```
+class ParseURL
+{
+    static void Main()
+    {
+        string inp = Console.ReadLine();
+        string[] strs = inp.Split(new string[] { "://" }, StringSplitOptions.None);
+        string protocol = "";
+        string server = "";
+        string resoruce = "";
+        if (strs.Length > 1)
+        {
+            protocol = strs[0];
+            string[] secstr = strs[1].Split('/');
+            server = secstr[0];
+            if (secstr.Length > 1)
+            {
+                resoruce = secstr[1];
+            }
+        }
+        Console.WriteLine($"[Protocol] = {protocol}");
+        Console.WriteLine($"[Server] = {server}");
+        Console.WriteLine($"[Resource] = {resoruce}");
+    }    
+}
+```
+
 
