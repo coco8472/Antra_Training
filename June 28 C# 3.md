@@ -78,3 +78,74 @@
 23. True/False. A class can implement more than one interface
 * True
 
+
+# Working with methods
+## 1. Reverse Array
+```
+static void Main()
+{
+    string inp = Console.ReadLine();
+    string[] strs = inp.Split(' ');
+    int j = strs.Length - 1;
+    string temp = "";
+    for (int i = 0  ; i < (strs.Length)/2; i++)
+    {
+        temp = strs[i];
+        strs[i] = strs[j];
+        strs[j] = temp;
+        j--;
+    }
+    Console.WriteLine(String.Join(", ", strs.ToArray()));
+}       
+```
+
+
+## 2. Fibonacci
+```
+static void Main()
+{
+    int a = 1;
+    int b = 1;
+    int k = 10;
+    int c = a + b;
+    for (int i = 1; i <= k; i++)
+    {
+        Console.WriteLine($"The {i}th element is: {a}");
+        a = b;
+        b = c;
+        c = a + b;
+    }
+}
+int Fibonacci(int k)
+{
+    int a = 1;
+    int b = 1;
+    int c = a + b;
+    for (int i = 1; i < k; i++)
+    {
+        a = b;
+        b = c;
+        c = a + b;
+    }
+    return a;
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
