@@ -84,19 +84,18 @@
 ```
 static void Main()
 {
-    string inp = Console.ReadLine();
-    string[] strs = inp.Split(' ');
-    int j = strs.Length - 1;
-    string temp = "";
-    for (int i = 0  ; i < (strs.Length)/2; i++)
+    int[] numbers = GenerateNumbers();
+    int j = numbers.Length - 1;
+    int temp = 0;
+    for (int i = 0; i < (numbers.Length) / 2; i++)
     {
-        temp = strs[i];
-        strs[i] = strs[j];
-        strs[j] = temp;
+        temp = numbers[i];
+        numbers[i] = numbers[j];
+        numbers[j] = temp;
         j--;
     }
-    Console.WriteLine(String.Join(", ", strs.ToArray()));
-}       
+    Console.WriteLine(String.Join(", ", numbers.ToArray()));
+}     
 ```
 
 
@@ -131,21 +130,35 @@ int Fibonacci(int k)
 }
 ```
 
+# Designing and Building Classes using object-oriented principles
+## 1. a
+
+
+
+## 2. a
+
+
+
+## 3. a
+
+
+
+## 4. a
 
 
 
 
+## 5. a
 
 
 
 
+## 6. a
 
 
 
 
-
-
-
+## 7. a
 
 
 
