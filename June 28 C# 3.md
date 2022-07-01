@@ -181,7 +181,53 @@ class Rectangle : Shape
 
 
 ## 2. Abstraction
-
+```
+abstract class Person
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public int Age { get; set; }
+    public string Address { get; set; }
+    public abstract void PrintDetails();
+    public void PrintBasicInfo()
+    {
+        Console.WriteLine("First Name - {0}", FirstName);
+        Console.WriteLine("Last Name - {0}", LastName);
+        Console.WriteLine("Age - {0}", Age);
+        Console.WriteLine("Address - {0}", Address);
+    }
+}
+class Student : Person
+{
+    public long RollNumber { get; set; }
+    public int Class { get; set; }
+    public string Stream { get; set; }
+    public override void PrintDetails()
+    {
+        Console.WriteLine("First Name - {0}", FirstName);
+        Console.WriteLine("Last Name - {0}", LastName);
+        Console.WriteLine("Age - {0}", Age);
+        Console.WriteLine("Address - {0}", Address);
+        Console.WriteLine("Roll Number - {0}", RollNumber);
+        Console.WriteLine("Class - {0}", Class);
+        Console.WriteLine("Stream - {0}", Stream);
+    }
+}
+class Instructor : Person
+{
+    public string Speciality { get; set; }
+    public long Salary { get; set; }
+    public override void PrintDetails()
+    {
+        Console.WriteLine("First Name - {0}", FirstName);
+        Console.WriteLine("Last Name - {0}", LastName);
+        Console.WriteLine("Age - {0}", Age);
+        Console.WriteLine("Address - {0}", Address);
+        Console.WriteLine("Speciality - {0}", Speciality);
+        Console.WriteLine("Salary - {0}", Salary);
+    }
+}
+```
 
 
 ## 3. Encapsulation
