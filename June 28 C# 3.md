@@ -322,5 +322,95 @@ interface IDepartmentService
 
 ## 7. Create two classes
 
+```
+class Color
+{
+    int red;
+    int green;
+    int blue;
+    int alpha;
+    public Color(int redin, int greenin, int bluein, int alphain)
+    {
+        red = redin;
+        green = greenin;
+        blue = bluein; 
+        alpha = alphain;
+    }
+    public Color(int redin, int greenin, int bluein)
+    {
+        red = redin;
+        green = greenin;
+        blue = bluein;
+        alpha = 255;
+    }
+    public void GetandSet(int r, int g, int b, int a)
+    {
+        Console.WriteLine($"RGBA value before modification is: {red}, {green}, {blue}, {alpha}");
+        red = r;
+        green = g;
+        blue = b;
+        alpha = a;
+        Console.WriteLine($"RGBA value after modification is: {red}, {green}, {blue}, {alpha}");
+    }
+    public float GetGrayScale()
+    {
+        return (red + green + blue) / 3;
+    }
+}
 
+class Ball
+{
+    float size;
+    Color c;
+    int nthrown;
+
+    public Ball(float sizein)
+    {
+        size = sizein;
+        c = new Color(0, 0, 0);
+        nthrown = 0;
+    }
+    public void Pop()
+    {
+        size = 0;
+    }
+    public void Throw()
+    {
+        if (size > 0)
+        {
+            nthrown++;
+        }
+    }
+    public int CheckThrown()
+    {
+        return nthrown;
+    }
+}
+
+class play
+{
+    static void Main()
+    {
+        Ball ball1 = new Ball(1);
+        Ball ball2 = new Ball(2);
+        Ball ball3 = new Ball(3);
+        Ball ball4 = new Ball(4);
+        ball1.Throw();
+        ball1.Throw();
+        ball1.Throw();
+        ball2.Throw();
+        ball2.Throw();
+        ball3.Throw();
+        ball4.Throw();
+        ball1.Pop();
+        ball4.Pop();
+        ball1.Throw();
+        ball4.Throw();
+        Console.WriteLine($"Ball1 was thrown {ball1.CheckThrown()} times");
+        Console.WriteLine($"Ball2 was thrown {ball2.CheckThrown()} times");
+        Console.WriteLine($"Ball3 was thrown {ball3.CheckThrown()} times");
+        Console.WriteLine($"Ball4 was thrown {ball4.CheckThrown()} times");
+    }
+}
+```
 
