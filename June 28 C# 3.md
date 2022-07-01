@@ -115,6 +115,7 @@ static void Main()
         c = a + b;
     }
 }
+
 int Fibonacci(int k)
 {
     int a = 1;
@@ -213,12 +214,14 @@ abstract class Person
     public int Age { get; set; }
     public string Address { get; set; }
 }
+
 class Student : Person
 {
     public long RollNumber { get; set; }
     public int Class { get; set; }
     public string Stream { get; set; }
 }
+
 class Instructor : Person
 {
     public string Speciality { get; set; }
@@ -238,6 +241,7 @@ abstract class Person
     public string Address { get; set; }
     public abstract void PrintDetails();
 }
+
 class Student : Person
 {
     public long RollNumber { get; set; }
@@ -254,6 +258,7 @@ class Student : Person
         Console.WriteLine("Stream - {0}", Stream);
     }
 }
+
 class Instructor : Person
 {
     public string Speciality { get; set; }
@@ -273,7 +278,45 @@ class Instructor : Person
 
 
 ## 6. Interface
+```
+interface IPersonService
+{
+    decimal salary { get; set; }
+    float calculateAge();
+    decimal calculateSalary();
+    string[] addresses { get; set; }
+    void getAddress();
+}
 
+interface IInstructor : IPersonService
+{
+    string belongsto { get; set; }
+    bool isHead { get; set; }
+    DateTime joinDate { get; set; }
+    float calculateYOE(DateTime joinDate);
+}
+
+interface IStudentService : IPersonService
+{
+    string[] courses { get; set; }
+    char[] grades { get; set; }
+    float calculateGPA(char[] grades);
+}
+
+interface ICourseService
+{
+    string[] enrolledStudents { get; set; }
+}
+
+interface IDepartmentService
+{
+    string head { get; set; }
+    DateTime start { get; set; }
+    DateTime end { get; set; }
+    string[] courses { get; set; }
+
+}
+```
 
 
 
