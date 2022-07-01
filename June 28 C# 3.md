@@ -46,35 +46,35 @@
 * True
 
 13. True/False. The override keyword is used to indicate that a method in a derived class is providing its own implementation of a method.
-* 
+* True
 
 14. True/False. The new keyword is used to indicate that a method in a derived class is providing its own implementation of a method.
-
+* False
 
 15. True/False. Abstract methods can be used in a normal (non-abstract) class. 
-
+* False
 
 16. True/False. Normal (non-abstract) methods can be used in an abstract class. 
-
+* False
 
 17. True/False. Derived classes can override methods that were virtual in the base class. 
-
+* False
 
 18. True/False. Derived classes can override methods that were abstract in the base class. 
-
+* True
 
 19. True/False. In a derived class, you can override a method that was neither virtual non abstract in the base class.
-
+* True
 
 20. True/False. A class that implements an interface does not have to provide an implementation for all of the members of the interface.
-
+* False
 
 21. True/False. A class that implements an interface is allowed to have other members that aren’t defined in the interface.
-
+* False
 
 22. True/False. A class can have more than one base class.
-
+* True
 
 23. True/False. A class can implement more than one interface
-
+* True
 
