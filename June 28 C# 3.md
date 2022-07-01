@@ -200,7 +200,6 @@ abstract class Person
     public string LastName { get { return LastName; } set { LastName = value; } }
     public int Age { get { return Age; } set { Age = value; } }
     public string Address { get { return Address; } set { Address = value; } }
-
 }
 ```
 
@@ -223,7 +222,7 @@ class Student : Person
 class Instructor : Person
 {
     public string Speciality { get; set; }
-    public long Salary { get; set; }
+    public decimal Salary { get; set; }
 }
 ```
 
@@ -258,7 +257,7 @@ class Student : Person
 class Instructor : Person
 {
     public string Speciality { get; set; }
-    public long Salary { get; set; }
+    public decimal Salary { get; set; }
     public override void PrintDetails()
     {
         Console.WriteLine("First Name - {0}", FirstName);
