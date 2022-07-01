@@ -188,14 +188,56 @@ abstract class Person
     public string LastName { get; set; }
     public int Age { get; set; }
     public string Address { get; set; }
+}
+```
+
+
+## 3. Encapsulation
+```
+abstract class Person
+{
+    public string FirstName { get { return FirstName; } set { FirstName = value; } }
+    public string LastName { get { return LastName; } set { LastName = value; } }
+    public int Age { get { return Age; } set { Age = value; } }
+    public string Address { get { return Address; } set { Address = value; } }
+
+}
+```
+
+
+## 4. Inheritance
+```
+abstract class Person
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public int Age { get; set; }
+    public string Address { get; set; }
+}
+class Student : Person
+{
+    public long RollNumber { get; set; }
+    public int Class { get; set; }
+    public string Stream { get; set; }
+}
+class Instructor : Person
+{
+    public string Speciality { get; set; }
+    public long Salary { get; set; }
+}
+```
+
+
+
+## 5. Polymorphism
+```
+abstract class Person
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public int Age { get; set; }
+    public string Address { get; set; }
     public abstract void PrintDetails();
-    public void PrintBasicInfo()
-    {
-        Console.WriteLine("First Name - {0}", FirstName);
-        Console.WriteLine("Last Name - {0}", LastName);
-        Console.WriteLine("Age - {0}", Age);
-        Console.WriteLine("Address - {0}", Address);
-    }
 }
 class Student : Person
 {
@@ -228,19 +270,6 @@ class Instructor : Person
     }
 }
 ```
-
-
-## 3. Encapsulation
-
-
-
-## 4. Inheritance
-
-
-
-
-## 5. Polymorphism
-
 
 
 
