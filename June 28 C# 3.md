@@ -1,43 +1,52 @@
 # Object-Oriented Programming
 
 1. What are the six combinations of access modifier keywords and what do they do? 
-
+* Public. Objects are accessible from everywhere in a project without any restrictions.
+* Private. Objects are accessible only inside a class or a structure. As a result, we can’t access them outside the class they are created.
+* Protected. Objects are accessible inside the class and in all classes that derive from that class.
+* Internal. The access is limited exclusively to classes defined within the current project assembly.
+* Protected Internal. It is a combination of protected and internal. As a result, we can access the protected internal member only in the same assembly or in a derived class in other assemblies.
+* Private Protected. It is a combination of the private and protected keywords. We can access members inside the containing class or in a class that derives from a containing class, but only in the same assembly(project). 
 
 2. What is the difference between the static, const, and readonly keywords when applied to a type member?
-
+* For the readonly keyword, the latest value is known by the runtime. For the const keyword, the value must be known by compile time. 
+* Readonly can only be initialized at the class-level.
+* Const variables can be referenced through "ClassName.VariableName", while readonly can be referenced through "InstanceName.VariableName".
 
 3. What does a constructor do?
-
+* Constructor is a method that will invoke automatically whenever an instance of class or struct is created. The constructor will have the same name as the class or struct, and it is useful to initialize and set default values for the data members of the new object.
 
 4. Why is the partial keyword useful?
-
+* The partial keyword indicates that other parts of the class, struct, or interface can be defined in the namespace. All the parts must use the partial keyword.
 
 5. What is a tuple?
-
+* It is a data structure which consists of the multiple parts.
 
 6. What does the C# record keyword do?
-
+* It defines a reference type that provides built-in functionality for encapsulating data.
 
 7. What does overloading and overriding mean?
-
+* Overloading is the ability to have multiple methods within the same class with the same name, but with different parameters.
+* Overriding is the ability to redefine the implementation of a method in a class that inherits from a parent class.
 
 8. What is the difference between a field and a property?
-
+* A field is a variable of any type that is declared directly in the class while property is a member that provides a flexible mechanism to read, write or compute the value of a private field.
 
 9. How do you make a method parameter optional?
-
+* I can assign default values for that parameter
 
 10. What is an interface and how is it different from abstract class?
-
+* An interface in C# is a type definition similar to a class, except that it purely represents a contract between an object and its user.
+* The difference is that, interface can have methods, properties, events, and indexers as its members. But interfaces will contain only the declaration of the members.
 
 11. What accessibility level are members of an interface?
-
+* Public
 
 12. True/False. Polymorphism allows derived classes to provide different implementations of the same method.
-
+* True
 
 13. True/False. The override keyword is used to indicate that a method in a derived class is providing its own implementation of a method.
-
+* 
 
 14. True/False. The new keyword is used to indicate that a method in a derived class is providing its own implementation of a method.
 
