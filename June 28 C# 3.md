@@ -131,34 +131,79 @@ int Fibonacci(int k)
 ```
 
 # Designing and Building Classes using object-oriented principles
-## 1. a
+## 1. Basic Principles
+```
+// Abstraction:
+abstract class Shape
+{
+    public abstract double area();
+}
+
+// Encapsulation
+public class Circle
+{
+    private float radius;
+    public float Radius
+    {
+        get
+        {
+            return radius;
+        }
+        set
+        {
+            radius = value;
+        }
+    }
+}
+
+// Inheritance
+class Cube : Shape
+{
+    public float leng;
+    public override double area()
+    {
+        return leng * leng;
+    }
+}
+
+// Polymorphism
+class Rectangle : Shape
+{
+    public float length1;
+    public float length2;
+    public override double area()
+    {
+        return length1 * length2;
+    }
+}   
+
+```
+
+
+## 2. Abstraction
 
 
 
-## 2. a
+## 3. Encapsulation
 
 
 
-## 3. a
-
-
-
-## 4. a
+## 4. Inheritance
 
 
 
 
-## 5. a
+## 5. Polymorphism
 
 
 
 
-## 6. a
+## 6. Interface
 
 
 
 
-## 7. a
+## 7. Create two classes
 
 
 
