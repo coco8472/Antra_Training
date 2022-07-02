@@ -114,7 +114,35 @@ public class MyList<T> : List<T>
 
 ## 3. GenericRepository
 
+```
+public interface IRepository<T> where T : class
+{
+    T GetById(Int64 id);
+    void Add(T entity);
+    void Remove(T entity);
+    void Update(T entity);
+}
+public class Repository<T> : IRepository<T> where T : class
+{ 
+    public void Add(T item)
+    {
 
+    }
+    public void Remove(T entity)
+    {
+
+    }
+    public T GetById(long id)
+    {
+
+    }
+    public void Update(T entity)
+    {
+
+    }
+
+}
+```
 
 
 
