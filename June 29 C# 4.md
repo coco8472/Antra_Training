@@ -38,7 +38,7 @@ class Node
     Object data;
 }
 
-class Stack
+class MyStack<T> : Stack<T>
 {
     Node Top;
     int len = 0;
@@ -69,9 +69,47 @@ class Stack
 ```
 
 ## 2. MyList
+```
+public class MyList<T> : List<T>
+{
+    public void Add(T element)
+    {
+        Add(element);
+    }
+    public T Remove(int index)
+    {   
+        T item = this.Find(t => t.ID == index);
+        if (this.Exists(t => t.ID == index)) RemoveAll(t => t.ID == index);
+        return item;
+    }
+    public bool Contains(T element)
+    {
+        bool result = false;
+        if (this.Exists(t => t == element)) result = true;
+        return result;
 
-
-
+    }
+    public void Clear()
+    {
+        for (int i = 0; i < this.Max(n => n.ID); i++)
+        {
+            Remove(i);
+        }
+    }
+    public void InsertAt(T element, int index)
+    {
+        if (this.Exists(t => t.ID == index)) Add(element);
+    }
+    public void DeleteAt(int index)
+    {
+        if (this.Exists(t => t.ID == index)) RemoveAll(t => t.ID == index);
+    }
+    public T Find(int index)
+    {
+        return this.Find(n => n.ID == index);
+    }
+}    
+```
 
 
 ## 3. GenericRepository
