@@ -31,10 +31,42 @@
 
 # Practice working with Generics
 ## 1. MyStack
+```
+class Node
+{
+    Node next;
+    Object data;
+}
 
+class Stack
+{
+    Node Top;
+    int len = 0;
+    public int Count()
+    {
+        return len;
+    }
 
+    public Node Pop()
+    {
+        if (Top == null)
+            return null;
 
+        Node n = Top;
+        Top = Top.Next;
+        len--;
+        return n;
+    }
 
+    public void Push(Object i)
+    {
+        Node n = new Node(i);
+        n.Next = Top;
+        Top = n;
+        len++;
+    }
+}  
+```
 
 ## 2. MyList
 
